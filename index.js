@@ -53,12 +53,12 @@ for (let i = 0; i < callButtons.length; i++) {
 const callHistory = document.getElementById("call-history-entries");
 function addToCallHistory(name, number) {
     const entry = document.createElement("div");
-    entry.classList.add("p-2", "border-t", "border-gray-200");
+    entry.classList.add("p-2", "bg-gray-100", "rounded-xl");
 
     const now = new Date();
     const timeStr = now.toLocaleTimeString();
 
-    entry.innerHTML = `${name} ${number} - ${timeStr}`;
+    entry.innerHTML = `<strong>${name}</strong> ${number} - ${timeStr}`;
     callHistory.appendChild(entry);
 }
 
